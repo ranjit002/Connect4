@@ -123,15 +123,6 @@ class Board:
         """
         self.config = "334543331204154554511636660400566100122"
 
-    def evaluation(self):
-        """
-        Evaluates "strength" of configuration
-
-        Returns:
-            int: evaluation of configuration
-        """
-        return engine.evaluation(self)
-
     def engine_move(self):
         """
         Output the ideal next move

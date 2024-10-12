@@ -89,7 +89,7 @@ def minimax(
 
         if state.config not in hashmap:
 
-            hashmap[state.config] = state.evaluation()
+            hashmap[state.config] = evaluation(state)
 
         return None, hashmap[state.config]
 
