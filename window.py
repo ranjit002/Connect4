@@ -1,5 +1,3 @@
-import time
-
 import board
 import numpy as np
 import pygame
@@ -186,7 +184,7 @@ def main():
                         # Try updating the Board with the AI move as long as the game isn't won
                         if not my_board.checkwin():
                             move = my_board.engine_move()
-                            start = time.time()
+
                             move = my_board.engine_move()
 
                             if move in my_board.legalmoves():
