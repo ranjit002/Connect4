@@ -62,13 +62,10 @@ class Board:
             bool: True if gameover, else False
         """
 
-        mat1, mat2 = self.matrix_rep()
-
-        for kernel in detection_kernels:
-
-            if (4 in convolve(mat1, kernel)) or (4 in convolve(mat2, kernel)):
-
-                return True
+        for mat in self.matrix_rep():
+            for kernel in detection_kernels:
+                if 4 in convolve(mat, kernel):
+                    return True
 
         return False
 
